@@ -19,11 +19,11 @@ RUN apt-get -y install docker.io
 #   ll /var/run/ \
 #   groups \
 #   ls -l /lib/systemd/system/docker.socket
-RUN \
-  sudo groupadd docker \
-  sudo usermod -aG docker $USER \
-  newgrp docker
-RUN \
-  sudo chmod 666 /var/run/docker.sock \
-  sudo chgrp docker /lib/systemd/system/docker.socket \
-  sudo chmod g+w /lib/systemd/system/docker.socket
+# RUN \
+#   sudo groupadd docker \
+#   sudo usermod -aG docker $USER \
+#   newgrp docker
+# RUN \
+#   sudo chmod 666 /var/run/docker.sock \
+#   sudo chgrp docker /lib/systemd/system/docker.socket \
+#   sudo chmod g+w /lib/systemd/system/docker.socket
