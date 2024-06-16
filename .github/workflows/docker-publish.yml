@@ -24,4 +24,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ogresearch/java_node_DinD_17_20_27:latest
+          tags: ogresearch/java_node_dind_17_20_27:latest
