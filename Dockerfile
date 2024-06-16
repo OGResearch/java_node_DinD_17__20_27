@@ -14,11 +14,11 @@ RUN apt-get -y install docker.io
 # # Permitir que o usuário execute comandos Docker sem sudo
 # RUN echo "${USER}:$(id -g docker)" | tee -a /etc/group
 
-RUN \
-  cat /var/run/docker.sock \
-  ll /var/run/ \
-  groups \
-  ls -l /lib/systemd/system/docker.socket
+# RUN \
+#   cat /var/run/docker.sock \
+#   ll /var/run/ \
+#   groups \
+#   ls -l /lib/systemd/system/docker.socket
 RUN \
   sudo groupadd docker \
   sudo usermod -aG docker $USER \
